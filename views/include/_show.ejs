@@ -1,0 +1,19 @@
+<% for(var i = 0; i < users.length; i++) { %>
+<tr>
+  
+    <td align="left"><%= users[i].fname %></td>
+    
+    <td align="left">
+        <a href="/show-user?id=<%= users[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="mdi mdi-eye"></i></span>
+        </a></td>
+        <td align="left">
+        <a href="/update-user?id=<%= users[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="mdi mdi-account-edit"></i></span>
+        </a></td> <td align="left"> 
+        <a class="btn border-shadow delete" data-id=<%= users[i]._id%> >
+            <span class="text-gradient"><i class="mdi mdi-delete-forever"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>

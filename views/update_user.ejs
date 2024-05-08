@@ -1,0 +1,148 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+      
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update User</h2>
+            <span class="text-light">Use the below form to Update an account</span>
+        </div>
+
+        <!-- add user form -->
+         <!-- form handling -->
+ <form method="POST" id="update_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="fname" class="text-light">FName</label>
+            <input type="hidden" name="id" value="<%= user._id %>">
+            <input type="text" name="fname" value="<%= user.fname %>" placeholder="Mark Stoenis">
+        </div>
+        <div class="form-group">
+            <label for="Email" class="text-light">Email</label>
+            <input type="text" name="email" value="<%= user.email%>" placeholder="example@gmail.com">
+        </div>
+        <div class="form-group">
+            <label for="gender" class="text-light">Gender</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="gender" value="Male" <%= user.gender == 'Male' ? 'checked' : '' %>>
+                <label for="radio-2" class="radio-label">Male</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="gender" value="Female"  <%= user.gender == 'Female' ? 'checked' : '' %> >
+                <label for="radio-3" class="radio-label">Female</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="gender" class="text-light">Status</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="status" value="Active" <%= user.status == 'Active' ? 'checked' : '' %> >
+                <label for="radio-4" class="radio-label">Active</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="status" value="Inactive" <%= user.status == 'Inactive' ? 'checked' : '' %> >
+                <label for="radio-5" class="radio-label">Inactive</label>
+            </div>
+        </div>
+ 
+        <div class="form-group">
+            <label for="lname" class="text-light">Last Name</label>
+            
+            <input type="text" name="lname" value="<%= user.lname %>" placeholder="Stoenis">
+        </div>
+        <div class="form-group">
+            <label for="age" class="text-light">Age</label>
+            
+            <input type="number" name="age" value="<%= user.age %>" placeholder="18">
+        </div>
+        <div class="form-group">
+            <label for="mobilenumber" class="text-light">Mobile Number</label>
+            
+            <input type="number" name="mobilenumber" value="<%= user.mobilenumber %>" placeholder="9876543210">
+        </div>
+        <div class="form-group">
+            <label for="alternatemobilenumber" class="text-light">Alternate Mobile Number</label>
+            
+            <input type="number" name="alternatemobilenumber" value="<%= user.alternatemobilenumber %>" placeholder="9876543210">
+        </div>
+    
+   
+ 
+        <div class="form-group">
+            <label for="pastmedicalhistory" class="text-light">pastmedicalhistory</label>
+           
+            <input type="text" name="pastmedicalhistory" value="<%= user.pastmedicalhistory %>" placeholder="pastmedicalhistory">
+        </div>
+		<div class="form-group">
+            <label for="ongoingpastmedication" class="text-light">ongoingpastmedication</label>
+           
+            <input type="text" name="ongoingpastmedication" value="<%= user.ongoingpastmedication %>" placeholder="ongoingpastmedication">
+        </div>
+		<div class="form-group">
+            <label for="alergies" class="text-light">alergies</label>
+            
+            <input type="text" name="alergies" value="<%= user.alergies %>" placeholder="alergies">
+        </div>
+		<div class="form-group">
+            <label for="habits" class="text-light">habits</label>
+          
+            <input type="text" name="habits" value="<%= user.habits %>" placeholder="habits">
+        </div>
+		<div class="form-group">
+            <label for="symptoms" class="text-light">symptoms</label>
+          
+            <input type="text" name="symptoms" value="<%= user.symptoms %>" placeholder="symptoms">
+        </div><div class="form-group">
+            <label for="diagnosis" class="text-light">diagnosis</label>
+            
+            <input type="text" name="diagnosis" value="<%= user.diagnosis %>" placeholder="diagnosis">
+        </div>
+		<div class="form-group">
+            <label for="advice" class="text-light">advice</label>
+         
+            <input type="text" name="advice" value="<%= user.advice %>" placeholder="advice">
+        </div>
+		<div class="form-group">
+            <label for="medication" class="text-light">medication</label>
+            
+            <input type="text" name="medication" value="<%= user.medication %>" placeholder="medication">
+        </div>
+		<div class="form-group">
+            <label for="doctor" class="text-light">doctor</label>
+          
+            <input type="text" name="doctor" value="<%= user.doctor %>" placeholder="doctor">
+        </div>
+		<div class="form-group">
+            <label for="assdoctor" class="text-light">assdoctor</label>
+          
+            <input type="text" name="assdoctor" value="<%= user.assdoctor %>" placeholder="assdoctor">
+        </div>
+		<div class="form-group">
+            <label for="pastappt" class="text-light">pastappt</label>
+         
+            <input type="text" name="pastappt" value="<%= user.pastappt %>" placeholder="pastappt">
+        </div>
+		<div class="form-group">
+            <label for="upcomingappt" class="text-light">upcomingappt</label>
+           
+            <input type="text" name="upcomingappt" value="<%= user.upcomingappt %>" placeholder="upcomingappt">
+        </div>
+    
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>
+       
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
